@@ -1,0 +1,161 @@
+/* Eric Meyer's CSS Reset
+   http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+   This is a Sass partial
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Lavori\/Grafica\/SimpleSassBurger\/sass\/_reset\.scss}line{font-family:\000038}}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Lavori\/Grafica\/SimpleSassBurger\/sass\/_reset\.scss}line{font-family:\0000329}}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+  display: block;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Lavori\/Grafica\/SimpleSassBurger\/sass\/_reset\.scss}line{font-family:\0000333}}
+body {
+  line-height: 1;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Lavori\/Grafica\/SimpleSassBurger\/sass\/_reset\.scss}line{font-family:\0000336}}
+ol, ul {
+  list-style: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Lavori\/Grafica\/SimpleSassBurger\/sass\/_reset\.scss}line{font-family:\0000339}}
+blockquote, q {
+  quotes: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Lavori\/Grafica\/SimpleSassBurger\/sass\/_reset\.scss}line{font-family:\0000342}}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Lavori\/Grafica\/SimpleSassBurger\/sass\/_reset\.scss}line{font-family:\0000347}}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 
+   Mariano Franzese's Simple SASS Burgher
+   This is a Sass partial
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Lavori\/Grafica\/SimpleSassBurger\/sass\/main\.scss}line{font-family:\000035}}
+main {
+  width: 96%;
+  min-height: 100vh;
+  margin: auto;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Lavori\/Grafica\/SimpleSassBurger\/sass\/main\.scss}line{font-family:\0000311}}
+#hamburger {
+  height: 60px;
+  width: 60px;
+  position: relative;
+  display: block;
+  cursor: pointer;
+  padding: 14px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Lavori\/Grafica\/SimpleSassBurger\/sass\/_simpleSassBurger\.scss}line{font-family:\0000316}}
+#hamburger .line {
+  margin: 14.5px 0px;
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Lavori\/Grafica\/SimpleSassBurger\/sass\/_simpleSassBurger\.scss}line{font-family:\0000320}}
+#hamburger .line, #hamburger .line:after, #hamburger .line:before {
+  display: block;
+  height: 3px;
+  width: 32px;
+  background-color: #000;
+  -webkit-transition: top 300ms linear 300ms, -webkit-transform 300ms linear;
+          transition: top 300ms linear 300ms, transform 300ms linear;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Lavori\/Grafica\/SimpleSassBurger\/sass\/_simpleSassBurger\.scss}line{font-family:\0000327}}
+#hamburger .line:before, #hamburger .line:after {
+  position: absolute;
+  content: "";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Lavori\/Grafica\/SimpleSassBurger\/sass\/_simpleSassBurger\.scss}line{font-family:\0000331}}
+#hamburger .line:before {
+  top: -9px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Lavori\/Grafica\/SimpleSassBurger\/sass\/_simpleSassBurger\.scss}line{font-family:\0000334}}
+#hamburger .line:after {
+  top: 9px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Lavori\/Grafica\/SimpleSassBurger\/sass\/_simpleSassBurger\.scss}line{font-family:\0000338}}
+#hamburger .line.close {
+  background-color: transparent;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Lavori\/Grafica\/SimpleSassBurger\/sass\/_simpleSassBurger\.scss}line{font-family:\0000341}}
+#hamburger .line.close:after, #hamburger .line.close:before {
+  -webkit-transition: top 300ms linear, -webkit-transform 300ms linear 300ms, background-color 300ms linear;
+          transition: top 300ms linear, transform 300ms linear 300ms, background-color 300ms linear;
+  top: 0;
+  background-color: #333;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Lavori\/Grafica\/SimpleSassBurger\/sass\/_simpleSassBurger\.scss}line{font-family:\0000346}}
+#hamburger .line.close:after {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Lavori\/Grafica\/SimpleSassBurger\/sass\/_simpleSassBurger\.scss}line{font-family:\0000349}}
+#hamburger .line.close:before {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Lavori\/Grafica\/SimpleSassBurger\/sass\/_simpleSassBurger\.scss}line{font-family:\0000355}}
+#hamburger:hover .linea:before {
+  top: -10.5px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Lavori\/Grafica\/SimpleSassBurger\/sass\/_simpleSassBurger\.scss}line{font-family:\0000358}}
+#hamburger:hover .linea:after {
+  top: 10.5px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Lavori\/Grafica\/SimpleSassBurger\/sass\/_simpleSassBurger\.scss}line{font-family:\0000363}}
+#hamburger:hover .line.close:after, #hamburger:hover .line.close:before {
+  -webkit-transition: top 300ms linear, -webkit-transform 300ms linear 300ms;
+          transition: top 300ms linear, transform 300ms linear 300ms;
+  top: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Lavori\/Grafica\/SimpleSassBurger\/sass\/_simpleSassBurger\.scss}line{font-family:\0000367}}
+#hamburger:hover .line.close:after, #hamburger .line.close:after {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Lavori\/Grafica\/SimpleSassBurger\/sass\/_simpleSassBurger\.scss}line{font-family:\0000370}}
+#hamburger:hover .line.close:before, #hamburger .line.close:before {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+/*# sourceMappingURL=main.css.map */
