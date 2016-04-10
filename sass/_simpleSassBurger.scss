@@ -1,2 +1,74 @@
-/* CSS Document */
+/* 
+   Mariano Franzese's Simple SASS Burgher
+   This is a Sass partial
+*/
 
+
+@mixin burger-icon ($DivHeight: 50px, $Thickness: 2px, $Length: 40px, $Distance: 10px, $Color: #333, $Color-active: $Color, $Duration: 250ms) {
+	box-sizing: border-box;
+	height:$DivHeight;
+	width:$DivHeight;
+	position:relative;
+	display:block;
+	cursor:pointer;
+	$paddingDiv: ($DivHeight - $Length)/2;
+	padding: $paddingDiv;
+	
+	.burger {
+		margin: ($DivHeight - 2*$paddingDiv - $Thickness)/2 0px;
+		position:relative;
+		
+		&, &:after, &:before{
+			display:block;
+			height:$Thickness;
+			width:$Length;
+			background-color:$Color;
+			transition: top $Duration linear $Duration, transform $Duration linear;
+		}	
+		&:before, &:after{
+			position: absolute;
+			content:"";
+		}
+		&:before{
+			top:-($Distance+$Thickness);	
+		}
+		&:after{
+			top: $Distance+$Thickness;
+		}
+		
+		&.active{
+			background-color: transparent;
+		}
+		&.active:after, &.active:before{
+			transition: top $Duration linear, transform $Duration linear $Duration, background-color $Duration linear;
+			top: 0;
+			background-color:$Color-active;
+		}
+		&.active:after{
+			transform: rotate(45deg);	
+		}
+		&.active:before{
+			transform: rotate(-45deg);	
+		}
+	}
+	&:hover {
+		.burger {
+			&:before{
+				top: -($Distance+$Thickness+($Thickness/2));	
+			}
+			&:after{
+				top: $Distance+$Thickness+($Thickness/2);
+			}
+		}		
+	}	
+	&:hover .burger.active:after, &:hover .burger.active:before{
+		transition: top $Duration linear, transform $Duration linear $Duration;
+		top: 0;
+	}
+	&:hover .burger.active:after, .burger.active:after{
+		transform: rotate(-45deg);	
+	}
+	&:hover .burger.active:before, .burger.active:before{
+		transform: rotate(45deg);	
+	}
+}

@@ -13,5 +13,26 @@
 </head>
 
 <body>
+
+<main>
+<h1>Simple Sass Burger</h1>
+
+<div id="ham-button" class="hamburger">
+  <div class="burger"></div>
+</div>
+
+<a id="git" href="#">Download on GitHub</a>
+</main>
+
+<footer>2016 by <a href="http://www.wmfstudio.it">Mariano Franzese</a></footer>
+
+<script type="text/javascript">
+$(document).ready(function(e) {
+	$(".hamburger").click(function(e) {
+		$(".burger").toggleClass("active", 300);
+		e.preventDefault();
+	});
+});
+</script>
 </body>
 </html>
